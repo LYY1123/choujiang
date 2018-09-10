@@ -26,15 +26,16 @@
         <p>抽奖规则：</p>
         <p>1.关注智慧生活公众号的用户，抽奖有效；未关注智慧生活公众号的用户，抽奖后关注了智慧生活公众号，抽奖有效；未关注智慧生活公众号的用户，抽奖后未关注智慧生活公众号的用户，抽奖无效。</p>
         <p>2.每个关注智慧生活公众号的用户只有一次抽奖机会。</p>
-        <p>3.优惠券奖品仅可抵购智慧生活的智能门锁产品，智能门锁之外的其他产品不可使用优惠券。</p>
+        <p>3.优惠券奖品仅可抵购索伯菲品牌指纹锁，不可以与其他活动叠加使用</p>
         <p>4.除优惠券之外的其他的奖品均需要到店领取。</p>
         <p>5.活动最终解释权归智慧生活所有。</p>
       </div>
       <!-- 规则说明end -->
       <!-- 店铺信息 -->
       <div class="storeMsg">
-        <p>地址：兰考县健康南路未来都市26-8</p>
-        <p>联系电话：15515513450（微信同）</p>
+        <p>服务地址：兰考县振兴路与健康南路交叉口往西50米路北（未来城都市26-8）智慧生活</p>
+        <p>服务电话1：0371-2206-6620</p>
+        <p>服务电话2：15515513450（微信同）</p>
       </div>
       <!-- 店铺信息end -->
       <!-- 奖品弹框 -->
@@ -118,26 +119,26 @@ export default {
     countJp () {
       let _this = this;
       let probability = Math.ceil(Math.random()*100);
-      if(probability <= 50) {
+      if(probability <= 10) {
         _this.moveStyles = {
           transition: 'all 5s',
           transform: 'translate(-50%,-50%) rotate(2130deg)'
         }
-        _this.jpName = "50元 优惠券"
+        _this.jpName = "500元 优惠券"
       }
-      if( probability > 50 && probability <= 75) {
+      if( probability > 10 && probability <= 85) {
         _this.moveStyles = {
           transition: 'all 5s',
           transform: 'translate(-50%,-50%) rotate(1950deg)'
         }
-        _this.jpName = "80元 优惠券"
+        _this.jpName = "0.5元 现金红包"
       }
       if(probability > 75 && probability <= 100) {
         _this.moveStyles = {
           transition: 'all 5s',
           transform: 'translate(-50%,-50%) rotate(2010deg)'
         }
-        _this.jpName = "智能铅笔"
+        _this.jpName = "1元 现金红包"
       }
       setTimeout(function() {
         _this.startTurning = 0;
